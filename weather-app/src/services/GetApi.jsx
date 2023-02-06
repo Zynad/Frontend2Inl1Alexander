@@ -1,22 +1,11 @@
-import { useEffect } from "react";
+const GetApi = async (url) => {
+  let response = await fetch(url);
 
-const GetApi = (props) => {
-  useEffect(() => {
-    fetch(props.url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error");
-        }
-        return response.json();
-      })
-      .then((actualData) => {
-        props.data(actualData);
-        props.error("");
-      })
-      .catch((err) => {
-        props.error("Sökningen gav tyvärr ingen träff...");
-      });
-  }, []);
+  if (!response.ok) {
+    throw new Error("Error code: " + response.status);
+  } else {
+    return response.json();
+  }
 };
 
 export default GetApi;

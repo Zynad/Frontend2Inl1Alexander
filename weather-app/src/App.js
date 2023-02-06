@@ -1,10 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import PresentationContainer from "./container/PresentationContainer";
+import StartPage from "./container/StartPage";
 function App() {
   return (
     <div className="container-fluid">
-      <PresentationContainer />
+      <StartPage />
     </div>
   );
 }

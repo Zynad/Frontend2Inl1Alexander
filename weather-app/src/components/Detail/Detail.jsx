@@ -1,6 +1,7 @@
 import "./Detail.css";
 import "bootstrap/dist/css/bootstrap.css";
-const Detail = () => {
+const Detail = ({ weatherData }) => {
+  console.log(weatherData);
   return (
     <div className="col-md-12 row">
       <div className="detailDiv col-md-2" id="day1">
