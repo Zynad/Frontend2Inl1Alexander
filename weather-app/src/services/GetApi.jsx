@@ -1,11 +1,22 @@
-const GetApi = async (url) => {
-  let response = await fetch(url);
+import { useEffect } from "react";
 
-  if (!response.ok) {
-    throw new Error("Error code: " + response.status);
-  } else {
-    return response.json();
-  }
+const Api = ({ url, weatherData, errorMessage }) => {
+  useEffect(() => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error");
+        }
+        return response.json();
+      })
+      .then((actualData) => {
+        weatherData(actualData);
+        errorMessage("");
+      })
+      .catch((err) => {
+        errorMessage("Sökningen gav tyvärr ingen träff...");
+      });
+  }, []);
 };
 
-export default GetApi;
+export default Api;

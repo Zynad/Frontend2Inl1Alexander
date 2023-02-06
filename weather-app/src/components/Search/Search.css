@@ -1,0 +1,7 @@
+#search-area{text-align: center;
+margin-bottom: 40px;
+margin-top: 10px;}
+
+#search-button{background-color: black; color: orange; opacity: 0.6; margin-left: 10px; width: 100px;  border-radius: 5px;}
+
+#search-button:hover{opacity: 1;}

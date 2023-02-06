@@ -4,9 +4,13 @@
   border: 3px solid black;
   box-shadow: 2px;
   margin: 10px;
+  border-radius: 15px;
 }
 
 .detailDiv:hover {
   opacity: 1;
   background-color: red;
 }
+
+.col-md-12{text-align: center;
+margin-left: 100px;}

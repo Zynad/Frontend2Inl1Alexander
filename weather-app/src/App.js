@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import StartPage from "./container/StartPage";
 function App() {
   return (
-    <div className="container-fluid">
+    <div className="main-page">
       <StartPage />
     </div>
   );
